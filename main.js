@@ -22,7 +22,7 @@ const updateAllMaterial= ()=>{
     })
 }
 // Textures
-const bakedTexture = textureLoader.load('./public/baked2.jpg')
+const bakedTexture = textureLoader.load('./baked2.jpg')
 bakedTexture.flipY = false
 bakedTexture.encoding = THREE.sRGBEncoding
 // Canvas
@@ -40,7 +40,7 @@ const fenceColor = new THREE.MeshStandardMaterial({
 });
 const coffeeMaterial = new THREE.MeshBasicMaterial({map:bakedTexture})
 // Loading model
-objLoader.load('coffeshopRaw4096-2.glb', (gltf) => {
+objLoader.load('./coffeshopRaw4096-2.glb', (gltf) => {
     gltf.scene.scale.set(.3,.3,.3);
     const pole = gltf.scene.children.find(child=>child.name === 'pole');
     const windows = gltf.scene.children.find(child=>child.name === 'windows');
