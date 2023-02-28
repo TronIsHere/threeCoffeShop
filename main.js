@@ -46,7 +46,7 @@ objLoader.load('coffeshopRaw4096-2.glb', (gltf) => {
     const windows = gltf.scene.children.find(child=>child.name === 'windows');
     const fence1 = gltf.scene.children.find(child=>child.name === 'fence1');
     const fence2 = gltf.scene.children.find(child=>child.name === 'fence2');
-    console.log(fence1,1);
+    // console.log(fence1,1);
     pole.material = poleLight;
     // windows.material = poleLight;
     gltf.scene.traverse((child)=>{
@@ -214,7 +214,7 @@ const tick = () =>
         const translateY = -screenPosition.y * sizes.height * 0.5;
         point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
   
-        console.log(translateX);
+        // console.log(translateX);
       }
     // Update controls
     // controls.update()
